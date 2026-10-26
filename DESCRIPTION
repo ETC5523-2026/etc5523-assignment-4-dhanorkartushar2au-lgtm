@@ -1,0 +1,29 @@
+Package: penguinscope
+Title: Explore Palmer Penguin Body Measurements
+Version: 0.0.0.9000
+Authors@R: 
+    person("Tushar", "Dhanorkar", email = "dhanorkartushar2au@gmail.com",
+           role = c("aut", "cre"))
+Description: An interactive data product for exploring the Palmer Penguins
+    dataset. It helps the user compare the body measurements of the three
+    penguin species across islands and sex, through a Shiny app, bundled
+    data and summary functions.
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.3.3
+Depends: 
+    R (>= 4.1)
+Imports: 
+    bslib,
+    dplyr,
+    ggplot2,
+    rlang,
+    shiny
+Suggests: 
+    knitr,
+    rmarkdown
+VignetteBuilder: knitr
+URL: https://etc5523-2026.github.io/etc5523-assignment-4-dhanorkartushar2au-lgtm/
+BugReports: https://github.com/ETC5523-2026/etc5523-assignment-4-dhanorkartushar2au-lgtm/issues
