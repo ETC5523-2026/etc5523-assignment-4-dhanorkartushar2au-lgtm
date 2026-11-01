@@ -45,6 +45,5 @@ Full documentation and a usage vignette are on the package website:
 <https://etc5523-2026.github.io/etc5523-assignment-4-dhanorkartushar2au-lgtm/>
 
 ## Generative AI declaration
-I used Claude (Anthropic) to help plan the package, write and debug the R code,
-and draft the documentation. I checked and revised all generated code and text,
-and I take responsibility for the final submission.
+I used Claude for assistance — including help debugging the code and drafting the documentation — and I planned the project, tested and revised everything myself
+and take full responsibility for the final result.
