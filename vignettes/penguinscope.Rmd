@@ -1,0 +1,76 @@
+---
+title: "Exploring penguin sizes with penguinscope"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Exploring penguin sizes with penguinscope}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(collapse = TRUE, comment = "#>")
+```
+
+## What penguinscope is for
+
+`penguinscope` helps someone new to the Palmer Penguins data answer one
+question: **how do the body measurements of the three penguin species differ,
+and does that depend on the island or the penguin's sex?** It bundles a cleaned
+`penguins` dataset, a summary function, and a Shiny app.
+
+## Installation
+
+Install the package from GitHub:
+
+```{r, eval = FALSE}
+# install.packages("remotes")
+remotes::install_github("ETC5523-2026/etc5523-assignment-4-dhanorkartushar2au-lgtm")
+```
+
+```{r setup}
+library(penguinscope)
+```
+
+## The data
+
+The package includes the `penguins` dataset (333 penguins):
+
+```{r}
+head(penguins)
+```
+
+## Summarising the data
+
+`summarise_penguins()` returns the count, mean, spread and range of a chosen
+measurement for each group. For example, body mass by species:
+
+```{r}
+summarise_penguins(penguins, "body_mass_g")
+```
+
+Gentoo penguins are clearly the heaviest (a mean around 5000 g), while Adelie
+and Chinstrap are similar and lighter.
+
+## Launching and using the app
+
+To explore the data interactively, launch the Shiny app:
+
+```{r, eval = FALSE}
+launch_app()
+```
+
+In the app you can pick a **measurement** to compare, then tick or untick
+**species**, **islands** and **sex** to focus on particular groups. The boxplot
+and the summary table update to your selection.
+
+## Interpreting the outputs
+
+The boxplot shows the distribution of the chosen measurement for each species —
+the box is the middle half of the penguins and the line is the median, so a
+higher box means larger penguins. The table gives the exact mean and spread.
+
+With body mass selected, for instance, Gentoo penguins are far heavier than the
+other two species, and that difference holds across islands and both sexes.
+Narrowing to a single species on a single island (such as Gentoo on Dream)
+returns no penguins — some species live on only one island — and the app shows
+a message in that case.
